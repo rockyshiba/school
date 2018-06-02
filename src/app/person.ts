@@ -4,7 +4,7 @@ export class Person {
     lastName: string;
     dateOfBirth: Date;
 
-    getAge(): number{
+    /*getAge(): number{
         
         let currentDate = new Date();
         let age: number = currentDate.getFullYear() - this.dateOfBirth.getFullYear();
@@ -17,5 +17,5 @@ export class Person {
         }
 
         return age;
-    }
+    }*/
 }
