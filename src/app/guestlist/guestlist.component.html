@@ -1,8 +1,16 @@
-<p>
-  guestlist works!
-</p>
-<ul>
-  <li *ngFor="let g of guests">
-    {{ g.firstName }}, {{ g.dateOfBirth }}
-  </li>
-</ul>
+<div>
+  <label for="">First nane: </label>
+  <input [(ngModel)]="guestSearch.firstName" >
+</div>
+<div>
+  <label for="">Last name: </label>
+  <input [(ngModel)]="guestSearch.lastName">
+</div>
+<button (click)="searchPerson(guestSearch)">Search</button>
+<div *ngIf="guests">
+ <ul>
+   <li *ngFor="let g of guests">
+     {{ g.firstName }}
+   </li>
+ </ul>
+</div>

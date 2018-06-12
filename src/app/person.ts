@@ -5,10 +5,10 @@ export class Person {
     dateOfBirth: Date;
 
     /*getAge(): number{
-        
+
         let currentDate = new Date();
         let age: number = currentDate.getFullYear() - this.dateOfBirth.getFullYear();
-        
+
         if(
             this.dateOfBirth.getDate() > currentDate.getDate() &&
             this.dateOfBirth.getMonth() > currentDate.getMonth()

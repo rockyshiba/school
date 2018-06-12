@@ -9,9 +9,16 @@ import { Person } from '../person';
 })
 export class GuestlistComponent implements OnInit {
 
+  guestSearch: Person = new Person();
+
   guests: Person[];
 
   constructor(private peopleService: PeopleService) { }
+
+  searchPerson(person: Person): void {
+    this.peopleService.getPeople(person).subscribe(results => this.guests = results);
+    console.log(this.guests);
+  }
 
   ngOnInit() {
     this.peopleService.getPeople().subscribe(data => this.guests = data);
